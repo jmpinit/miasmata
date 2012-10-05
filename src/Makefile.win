@@ -1,0 +1,36 @@
+# Project: miasmata
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = body.o miasmata.o entity.o $(RES)
+LINKOBJ  = body.o miasmata.o entity.o $(RES)
+LIBS =  -L"C:/MinGW/lib" -mwindows libSDL_draw.a C:/MinGW/lib/libSDL.dll.a  
+INCS =  -I"C:/MinGW/include/SDL" 
+CXXINCS =  -I"C:/MinGW/include/SDL" 
+BIN  = miasmata.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before miasmata.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "miasmata.exe" $(LIBS)
+
+body.o: body.cpp
+	$(CPP) -c body.cpp -o body.o $(CXXFLAGS)
+
+miasmata.o: miasmata.cpp
+	$(CPP) -c miasmata.cpp -o miasmata.o $(CXXFLAGS)
+
+entity.o: entity.cpp
+	$(CPP) -c entity.cpp -o entity.o $(CXXFLAGS)

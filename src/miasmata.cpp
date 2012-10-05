@@ -10,8 +10,8 @@ using namespace std;
 #include "SDL/SDL_Draw.h"
 
 //Screen attributes
-const int SCREEN_WIDTH = 1600;
-const int SCREEN_HEIGHT = 900;
+const int SCREEN_WIDTH = 640;
+const int SCREEN_HEIGHT = 480;
 const int SCREEN_BPP = 32;
 
 SDL_Surface *screen = NULL;
@@ -26,12 +26,12 @@ int main(int argc, char* args[]) {
     SDL_Surface* screen = NULL;
     
     //Set up screen
-    screen = SDL_SetVideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP, SDL_SWSURFACE | SDL_FULLSCREEN);
+    screen = SDL_SetVideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP, SDL_SWSURFACE);
     
     //Set the window caption
-    SDL_WM_SetCaption("slosh", NULL );
+    SDL_WM_SetCaption("miasmata", NULL );
     
-    Uint32 c_white  = SDL_MapRGB(screen->format, 255,255,255);
+    Uint32 c_white  = SDL_MapRGB(screen->format, 255, 255, 255);
     
 	//Start SDL
     SDL_Init(SDL_INIT_EVERYTHING);
@@ -50,22 +50,16 @@ int main(int argc, char* args[]) {
             } else if(event.type == SDL_KEYDOWN) {
                 switch(event.key.keysym.sym) {
                     case SDLK_LEFT:
-                        cx -= 1;
                         break;
                     case SDLK_RIGHT:
-                        cx += 1;
                         break;
                     case SDLK_UP:
-                        cz += 1;
                         break;
                     case SDLK_DOWN:
-                        cz -= 1;
                         break;
                     case SDLK_0:
-                        ez += 10;
                         break;
                     case SDLK_1:
-                        ez -= 10;
                         break;
                     case SDLK_q:
                         quit = true;

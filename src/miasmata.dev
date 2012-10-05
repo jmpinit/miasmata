@@ -1,7 +1,7 @@
 [Project]
-FileName=slosh.dev
-Name=slosh
-UnitCount=3
+FileName=miasmata.dev
+Name=miasmata
+UnitCount=5
 Type=0
 Ver=1
 ObjFiles=
@@ -58,6 +58,16 @@ ProductVersion=
 AutoIncBuildNr=0
 
 [Unit3]
+FileName=miasmata.cpp
+CompileCpp=1
+Folder=miasmata
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit2]
 FileName=body.h
 CompileCpp=1
 Folder=
@@ -67,10 +77,20 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit2]
-FileName=slosh.cpp
+[Unit4]
+FileName=entity.cpp
 CompileCpp=1
-Folder=slosh
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit5]
+FileName=entity.h
+CompileCpp=1
+Folder=
 Compile=1
 Link=1
 Priority=1000
