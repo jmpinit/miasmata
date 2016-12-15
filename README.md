@@ -1,6 +1,7 @@
 miasmata
 =====
 
+![exploration](http://i.imgur.com/x0n0m4N.gif)
 ![light experiment](http://i.imgur.com/x0n0m4N.gif)
 
 Its inspiration comes from the ancient theory of the miasma – a disease causing gas. It was the prevailing explanation for the spread of sickness before germ theory came around. Within the theory, the miasmata were the disease vector – poisonous particles that would be absorbed into someone and make them sick.
